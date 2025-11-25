@@ -14,8 +14,9 @@ function Products() {
   }, []);
 
   return (
-    <div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[20px]">
+    <div className="md:w-8/10 mx-auto px-5">
+      <p className="text-4xl my-5">All products</p>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[20px]">
         {products.map((p) => (
           <div key={p.id} className="bg-gray-200 p-5 rounded-2xl h-[600px]">
             <img src={p.image} alt="" className="h-1/2 mx-auto" />
@@ -26,7 +27,9 @@ function Products() {
                   <p className="text-red-500">$ {p.price}</p>
                 </div>
               </div>
-              <button className="p-5 bg-blue-400 w-full rounded-2xl text-2xl">Add to Cart</button>
+              <button className="p-5 bg-blue-400 w-full rounded-2xl text-2xl">
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
